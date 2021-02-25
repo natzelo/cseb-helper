@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
-
+import logo from "../images/logo.png";
 function Navbar(props) {
   const history = useHistory();
   const [toggle, setToggle] = useState(false);
@@ -13,8 +13,8 @@ function Navbar(props) {
     <div>
       <nav className="navbar" role="navigation" aria-label="main navigation">
         <div className="navbar-brand">
-          <a className="navbar-item" href="https://bulma.io">
-            CSEB HELPER
+          <a className="navbar-item" href="/">
+            <img src={logo} alt="logo" />
           </a>
 
           <button
