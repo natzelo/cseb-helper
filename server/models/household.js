@@ -1,6 +1,9 @@
 const mongoose = require("mongoose");
 
 const householdSchema = new mongoose.Schema({
+  roundStatus: {
+    type: Boolean,
+  },
   incharge: {
     type: mongoose.Schema.Types.ObjectId,
     required: true,

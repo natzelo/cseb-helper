@@ -16,10 +16,12 @@ function AddRecord() {
         },
       };
       const res = await axios.get(`/api/bp/${bpNo}`, config);
+      if (res.status === 200) {
+        setHousehold(res.data);
+      }
       console.log(res.data);
-      setHousehold(res.data);
     } catch (e) {
-      alert.error("Maybe the BP Number is invalid.");
+      alert.error("BP Number is invalid or you are not incharge.");
     }
   };
 

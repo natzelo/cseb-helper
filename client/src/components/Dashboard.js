@@ -7,6 +7,7 @@ import Navbar from "./Navbar";
 import AddRecord from "./AddRecord";
 import AddHousehold from "./AddHousehold";
 import ViewHouseholds from "./ViewHouseholds";
+import Progress from "./Progress";
 
 function Dashboard() {
   const [user, setUser] = useState({ name: "User" });
@@ -53,6 +54,9 @@ function Dashboard() {
       break;
     case "2":
       sectionalComponent = <ViewHouseholds />;
+      break;
+    case "3":
+      sectionalComponent = <Progress />;
       break;
     default:
       break;

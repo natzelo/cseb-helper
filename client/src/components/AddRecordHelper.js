@@ -46,7 +46,7 @@ function AddRecordHelper(props) {
         setMd("");
       }
     } catch (e) {
-      alert.error("Something went wrong");
+      alert.error("OOPS! Are you taking the reading twice?");
     }
   };
 

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import logo from "../images/logo.png";
+import StartRoundButton from "./StartRoundButton";
 function Navbar(props) {
   const history = useHistory();
   const [toggle, setToggle] = useState(false);
@@ -56,9 +57,22 @@ function Navbar(props) {
                 View All connections
               </button>
             </div>
+
+            <div className="navbar-item">
+              <button
+                className="button is-link is-inverted"
+                value="3"
+                onClick={(e) => props.setNewSection(e.target.value)}
+              >
+                Track Progress
+              </button>
+            </div>
           </div>
           <div className="navbar-end">
             <div className="navbar-item">Hi, {props.name}</div>
+            <div className="navbar-item">
+              <StartRoundButton />
+            </div>
             <div className="navbar-item">
               <div className="buttons">
                 <button className="button is-danger" onClick={() => logout()}>

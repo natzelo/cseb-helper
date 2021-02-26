@@ -54,6 +54,10 @@
   padding: 20px;
 }
 
+.progress-wrapper {
+  padding: 30px;
+}
+
 @media (max-width: 800px) {
   .login-wrapper {
     padding: 15px;
