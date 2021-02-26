@@ -3,6 +3,8 @@ import { Link, useHistory } from "react-router-dom";
 import { useAlert } from "react-alert";
 import axios from "axios";
 
+import fullLogo from "../images/fullLogo.png";
+
 function Login() {
   const history = useHistory();
   const [email, setEmail] = useState("");
@@ -24,55 +26,57 @@ function Login() {
 
   return (
     <div>
-      <div className="login-outer-wrapper">
+      <div className="login-outer-wrapper" style={{ height: "100vh" }}>
         <div className="login-wrapper">
-          <h1 className="title" style={{ textAlign: "center" }}>
-            Login
-          </h1>
-          <div className="field">
-            <label className="label is-large">Email</label>
-            <div className="control has-icons-left ">
-              <input
-                className="input"
-                type="email"
-                placeholder="Email input"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
-              <span className="icon is-small is-left">
-                <i className="fas fa-envelope"></i>
-              </span>
-            </div>
+          <div className="logo-wrapper">
+            <img src={fullLogo} alt="logo" />
           </div>
-
-          <div className="field">
-            <label className="label is-large">Password</label>
-            <div className="control has-icons-left">
-              <input
-                className="input"
-                type="password"
-                placeholder="Type Password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-              />
-              <span className="icon is-small is-left">
-                <i className="fas fa-key"></i>
-              </span>
+          <div className="box">
+            <div className="field">
+              <label className="label is-large">Email</label>
+              <div className="control has-icons-left ">
+                <input
+                  className="input"
+                  type="email"
+                  placeholder="Email input"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+                <span className="icon is-small is-left">
+                  <i className="fas fa-envelope"></i>
+                </span>
+              </div>
             </div>
-          </div>
 
-          <div className="field is-grouped">
-            <div className="control">
-              <button className="button is-link" onClick={() => onLogin()}>
-                Login
-              </button>
+            <div className="field">
+              <label className="label is-large">Password</label>
+              <div className="control has-icons-left">
+                <input
+                  className="input"
+                  type="password"
+                  placeholder="Type Password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+                <span className="icon is-small is-left">
+                  <i className="fas fa-key"></i>
+                </span>
+              </div>
             </div>
-            <div className="control">
-              <Link to="/signup">
-                <button className="button is-link is-light">
-                  Create a new Account
+
+            <div className="field is-grouped">
+              <div className="control">
+                <button className="button is-link" onClick={() => onLogin()}>
+                  Login
                 </button>
-              </Link>
+              </div>
+              <div className="control">
+                <Link to="/signup">
+                  <button className="button is-link is-light">
+                    Create a new Account
+                  </button>
+                </Link>
+              </div>
             </div>
           </div>
         </div>

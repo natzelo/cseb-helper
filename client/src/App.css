@@ -1,11 +1,20 @@
+html {
+  background-color: rgba(221, 221, 221, 0.5);
+}
 .login-wrapper {
   padding: 50px 30% 0 30%;
 }
 
+.sign-up-wrapper {
+  padding: 50px 30% 0 30%;
+  height: 100vh;
+  background-image: url("../src/images/signupBg.jpg");
+  background-size: cover;
+}
+
 .login-outer-wrapper {
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
+  background-image: url("../src/images/loginBg.jpg");
+  background-size: cover;
 }
 
 .big-outer-wrapper {
@@ -43,6 +52,7 @@
 
 .new-hh-wrapper {
   margin: 50px 20px 10px 20px;
+  padding-bottom: 20px;
 }
 .all-table-wrapper {
   display: flex;
@@ -58,11 +68,21 @@
   padding: 30px;
 }
 
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 8px 0;
+}
+
 @media (max-width: 800px) {
   .login-wrapper {
     padding: 15px;
   }
 
+  .sign-up-wrapper {
+    padding: 15px;
+  }
   .custom-css {
     display: block;
     overflow-x: auto;

@@ -63,7 +63,7 @@ function Dashboard() {
   }
 
   return (
-    <div>
+    <div className="dashboard">
       <Navbar name={user.name} setNewSection={setSection} />
       {sectionalComponent}
     </div>
