@@ -54,7 +54,7 @@ function AddRecordHelper(props) {
     <div className="big-outer-wrapper">
       <div className="add-record">
         <h2 className="subtitle">Basic Details</h2>
-        <div className="table">
+        <table className="table" style={{ background: "transparent" }}>
           <tbody>
             <tr>
               <td>
@@ -69,7 +69,7 @@ function AddRecordHelper(props) {
               <td>{props.household.address}</td>
             </tr>
           </tbody>
-        </div>
+        </table>
         <h2 className="subtitle">Add Record</h2>
         <div className="form-wrapper">
           <div className="field is-horizontal">
@@ -159,7 +159,7 @@ function AddRecordHelper(props) {
 
           <h2 className="subtitle">More Details</h2>
           <div className="table-wrapper">
-            <div className="table">
+            <table className="table" style={{ background: "transparent" }}>
               <tbody>
                 <tr>
                   <td>
@@ -179,9 +179,15 @@ function AddRecordHelper(props) {
                   </td>
                   <td>{props.household.meterNo}</td>
                 </tr>
+                <tr>
+                  <td>
+                    <strong>Capacity</strong>
+                  </td>
+                  <td>{props.household.capacity}</td>
+                </tr>
               </tbody>
-            </div>
-            <div className="table">
+            </table>
+            <table className="table" style={{ background: "transparent" }}>
               <tbody>
                 <tr>
                   <td>
@@ -202,11 +208,11 @@ function AddRecordHelper(props) {
                   <td>{props.household.manufacturer}</td>
                 </tr>
               </tbody>
-            </div>
+            </table>
           </div>
           <h2 className="subtitle">Previous Readings</h2>
           <div className="reading-wrapper">
-            <table className="table">
+            <table className="table" style={{ background: "transparent" }}>
               <thead>
                 <tr className="is-selected">
                   <th>Date</th>

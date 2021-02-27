@@ -57,7 +57,10 @@ function Progress() {
       </div>
 
       <h2 className="subtitle">Places left to visit</h2>
-      <table className="table is-bordered is-striped is-fullwidth">
+      <table
+        className="table is-bordered is-striped is-fullwidth"
+        style={{ background: "transparent" }}
+      >
         <thead>
           <tr className="is-selected">
             <th>BP No.</th>

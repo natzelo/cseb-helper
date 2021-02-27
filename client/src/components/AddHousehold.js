@@ -12,6 +12,7 @@ function AddHousehold() {
   const [bookNo, setBookNo] = useState("");
   const [BPNo, setBPNo] = useState("");
   const [serviceNo, setServiceNo] = useState("");
+  const [capacity, setCapacity] = useState("");
 
   const save = async () => {
     const data = {
@@ -23,6 +24,7 @@ function AddHousehold() {
       bookNo,
       BPNo,
       serviceNo,
+      capacity,
     };
 
     const config = {
@@ -120,6 +122,30 @@ function AddHousehold() {
         </div>
 
         <div className="field">
+          <label className="label">Manufaturer</label>
+          <div className="control">
+            <input
+              className="input"
+              type="text"
+              value={manufacturer}
+              onChange={(e) => setManu(e.target.value)}
+            />
+          </div>
+        </div>
+
+        <div className="field">
+          <label className="label">Capacity</label>
+          <div className="control">
+            <input
+              className="input"
+              type="text"
+              value={capacity}
+              onChange={(e) => setCapacity(e.target.value)}
+            />
+          </div>
+        </div>
+
+        <div className="field">
           <label className="label">MHR No.</label>
           <div className="control">
             <input
@@ -139,18 +165,6 @@ function AddHousehold() {
               type="text"
               value={bookNo}
               onChange={(e) => setBookNo(e.target.value)}
-            />
-          </div>
-        </div>
-
-        <div className="field">
-          <label className="label">Manufaturer</label>
-          <div className="control">
-            <input
-              className="input"
-              type="text"
-              value={manufacturer}
-              onChange={(e) => setManu(e.target.value)}
             />
           </div>
         </div>

@@ -34,7 +34,10 @@ function ViewHouseholds() {
       </h2>
 
       <div className="all-table-wrapper">
-        <table className="table is-bordered is-striped is-fullwidth custom-css">
+        <table
+          className="table is-bordered is-striped is-fullwidth custom-css"
+          style={{ background: "transparent" }}
+        >
           <thead>
             <tr className="is-selected is-primary">
               <th>BP No.</th>
@@ -42,6 +45,7 @@ function ViewHouseholds() {
               <th>Name</th>
               <th>Address</th>
               <th>Meter No.</th>
+              <th>Capacity</th>
               <th>Last Reading</th>
               <th>PF</th>
               <th>MD</th>

@@ -25,6 +25,10 @@ const householdSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  capacity: {
+    type: String,
+    required: true,
+  },
   MHRNo: {
     type: String,
     required: true,

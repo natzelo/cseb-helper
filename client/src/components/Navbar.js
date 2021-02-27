@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
-import logo from "../images/fullLogo.png";
+import logo from "../images/logo.png";
 import StartRoundButton from "./StartRoundButton";
 function Navbar(props) {
   const history = useHistory();

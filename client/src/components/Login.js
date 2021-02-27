@@ -3,7 +3,7 @@ import { Link, useHistory } from "react-router-dom";
 import { useAlert } from "react-alert";
 import axios from "axios";
 
-import fullLogo from "../images/fullLogo.png";
+import fullLogo from "../images/logo.png";
 
 function Login() {
   const history = useHistory();
@@ -29,7 +29,7 @@ function Login() {
       <div className="login-outer-wrapper" style={{ height: "100vh" }}>
         <div className="login-wrapper">
           <div className="logo-wrapper">
-            <img src={fullLogo} alt="logo" />
+            <img src={fullLogo} alt="logo" style={{ width: "100px" }} />
           </div>
           <div className="box">
             <div className="field">

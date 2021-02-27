@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useAlert } from "react-alert";
 import axios from "axios";
 
-import fullLogo from "../images/fullLogo.png";
+import fullLogo from "../images/logo.png";
 
 function Signup() {
   const alert = useAlert();
@@ -27,7 +27,7 @@ function Signup() {
     <>
       <div className="sign-up-wrapper">
         <div className="logo-wrapper">
-          <img src={fullLogo} alt="logo" />
+          <img src={fullLogo} alt="logo" style={{ width: "100px" }} />
         </div>
         <div className="box">
           <div className="field">

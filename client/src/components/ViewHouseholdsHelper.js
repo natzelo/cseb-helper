@@ -9,6 +9,7 @@ function ViewHouseholdsHelper(props) {
         <td>{household.name}</td>
         <td>{household.address}</td>
         <td>{household.meterNo}</td>
+        <td>{household.capacity}</td>
         {household.readings.length !== 0 ? (
           <>
             <td>{household.readings[household.readings.length - 1].energy}</td>
