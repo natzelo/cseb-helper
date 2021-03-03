@@ -1,6 +1,9 @@
 import React from "react";
+import comp from "../utils/comp";
 
 function ViewHouseholdsHelper(props) {
+  props.households.sort((a, b) => comp(a.bookNo, b.bookNo));
+
   const renderedHouseholds = props.households.map((household) => {
     return (
       <tr>

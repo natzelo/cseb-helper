@@ -35,7 +35,15 @@ const householdSchema = new mongoose.Schema({
   },
   bookNo: {
     type: String,
+    unique: false,
     required: true,
+    trim: true,
+    validate(value) {
+      const res = value.match(/B[0-9]+\/[0-9]+/);
+      if (res === null) {
+        throw new Error("Invalid Book Number");
+      }
+    },
   },
   BPNo: {
     type: String,
