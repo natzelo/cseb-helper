@@ -40,6 +40,12 @@ const householdSchema = new mongoose.Schema({
   BPNo: {
     type: String,
     required: true,
+    unique: true,
+    validate(value) {
+      if (value.length !== 10) {
+        throw new Error("Invalid BP");
+      }
+    },
   },
   serviceNo: {
     type: String,
